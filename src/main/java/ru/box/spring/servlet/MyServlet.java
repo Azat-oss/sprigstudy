@@ -1,6 +1,5 @@
 package ru.box.spring.servlet;
 
-import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 @RestController
@@ -24,24 +23,6 @@ public class MyServlet {
                 "n2", n2,
                 "n3", n3,
                 "max", max
-        );
-    }
-
-    @GetMapping("/poems")
-    public Map<String, Object> getPoem() {
-        String poem = """
-                Мороз и солнце; день чудесный!
-                Ещё ты дремлешь, друг прелестный —
-                Пора, красавица, проснись:
-                Открой сомкнуты негой взоры
-                Навстречу северной Авроры,
-                Звездою севера явись!
-                """;
-
-        return Map.of(
-                "title", "Зимнее утро (отрывок)",
-                "author", "А. С. Пушкин",
-                "text", poem
         );
     }
 

@@ -36,7 +36,7 @@ public class ReceptController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    @GetMapping("/search") //http://localhost:8080/api/recepts/search?name=борщ
+    @GetMapping("/search") //с
     public ResponseEntity<Recept> byNameRecept(@RequestParam String name) {
         return repository.findByNameRecept(name)
                 .map(ResponseEntity::ok)
